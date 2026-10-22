@@ -1,0 +1,20 @@
+# Set background color (rrggbb[aa] format)
+color=#242424
+
+# Use an image for the background, stretched to fit
+image=~/Pictures/wallpapers/debianlogoASCII.png
+scaling=stretch
+
+indicator-x-position=1820
+indicator-y-position=980
+
+# Show the number of failed authentication attempts
+show-failed-attempts
+
+# Customize colors for the indicator
+inside-color=#00000099
+ring-color=#CBCBCB # light-grey
+line-color=#FFFFFF
+text-color=#FFFFFF
+key-hl-color=#344252
+

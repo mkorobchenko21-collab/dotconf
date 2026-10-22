@@ -1,0 +1,30 @@
+set number
+set relativenumber
+
+set ignorecase
+set smartcase
+
+set cursorline 
+set cursorlineopt=both
+
+set scrolloff=10
+
+set confirm
+
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set list
+set listchars=multispace:-,trail:_,tab:>-
+
+nmap j gj
+nmap k gk
+
+syntax enable
+
+colorscheme habamax
+
+
+set nowrap
+

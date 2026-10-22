@@ -1,0 +1,119 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 24,
+    "spacing": 5,
+    "modules-left": [
+        "sway/workspaces",
+        "temperature",
+        "sway/mode"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "wireplumber",
+        "battery",
+        "idle_inhibitor",
+        "bluetooth",
+        "network",
+        "tray",
+        "debian-icon"
+    ],
+    // modules-left
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "on-click": "activate",
+        "sort-by-number": true
+    },
+    "temperature": {
+        "format": "{temperatureC}°C",
+        "on-click": "ghostty -e bpytop",
+        "on-click-right": "ghostty -e htop"
+    },
+    // modules-center
+    "clock": {
+        "format": "{:%d.%m.%Y | %H:%M}",
+        "tooltip": true,
+        "tooltip-format": "{calendar}"
+    },
+    // modules-right
+    "wireplumber": {
+        "format": "{volume}% {icon}",
+        "max-volume": 100,
+        "scroll-step": 5,
+        "format-icons": [
+            "\uf026",
+            "\uf027",
+            "\uf028"
+        ],
+        "tooltip": true,
+        "tooltip-format": "{volume}%",
+        "on-click": "pavucontrol",
+        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    },
+    "battery": {
+        "bat": "BAT0",
+        "interval": 5,
+        "states": {
+            "full": 100,
+            "half": 60,
+            "warning": 30,
+            "critical": 20
+        },
+        // "events": true,
+        "events": {
+            "on-discharging-warning": "notify-send -u warning 'Low Battery'",
+            "on-discharging-critical": "notify-send -u critical 'Very Low Battery'"
+        },
+        "format": "{icon}",
+        "format-icons": [
+            "\uf244",
+            "\uf243",
+            "\uf242",
+            "\uf241",
+            "\uf240"
+        ],
+        "tooltip": true,
+        "tooltip-format": "{capacity}%\n{time}"
+    },
+    "network": {
+        "format": "",
+        "format-ethernet": "\udb83\udc9d",
+        "format-wifi": "{icon}",
+        "format-disconnected": "\udb83\udc9c",
+        "format-icons": [
+            "\udb82\udd2f",
+            "\udb82\udd1f",
+            "\udb82\udd22",
+            "\udb82\udd25",
+            "\udb82\udd28"
+        ],
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname}",
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "ghostty -e nmtui",
+        "on-click-right": "systemctl restart NetworkManager"
+    },
+    "bluetooth": {
+        "format": "\udb80\udcaf",
+        "format-disabled": "\udb80\udcb2",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+        "on-click": "bluetoothctl power $(bluetoothctl show | grep -q 'Powered: yes' && echo off || echo on)",
+        "on-click-right": "ghostty -e bluetoothctl"
+    },
+    "tray": {
+        "icon-size": 16,
+        "spacing": 16
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "\udb80\udd76",
+            "deactivated": "\udb83\udfaa"
+        }
+    }
+}

@@ -1,0 +1,132 @@
+@define-color foreground #eeeeee;
+@define-color foreground-inactive #808080;
+@define-color background #000000;
+
+* {
+    border: none;
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 17px;
+    color: @foreground;
+    padding: 0;
+    margin: 0;
+    min-height: 10px;
+}
+
+#waybar {
+    color: @foreground;
+    background-color: @background;
+}
+
+
+/* 
+ * modules-left 
+*/
+
+#workspaces button {
+    color: @foreground-inactive;
+
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+}
+
+#workspaces button.focused {
+    color: @foreground;
+    background-color: #3B3B3B;
+}
+
+#temperature {
+    font-size: 15px;
+    background-color: #3b3b3b;
+    border-radius: 6px;
+
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+    padding-top: 0.1em;
+    padding-bottom: 0;
+}
+
+#temperature,
+#workspaces button,
+#workspaces button.focused {
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 4px;
+    margin-top: 1px;
+}
+
+
+/* 
+ * modules-right 
+*/
+
+#wireplumber.muted {
+    color: #ff474c
+        /* color: #ff7f7f */
+}
+
+/* #battery{ color: @foreground} */
+/* #battery.full:not(.charging){ color: Green; } */
+/* #battery.charging{ color: #8fb935; } */
+/* #battery.half:not(.charging){ color: #e6e22e; } */
+/* #battery.warning:not(.charging){ color: #e09c3b; } */
+/* #battery.critical:not(.charging) { */
+/*   color: #e64747; */
+/*   animation: blink 1s infinite; */
+/* } */
+/* @keyframes blink { */
+/*   to { */
+/*     opacity: 0.3; */
+/*   } */
+/* } */
+
+#battery:not(.charging) {
+    color: @foreground
+}
+
+#battery.full {
+    color: Green
+}
+
+#battery.charging {
+    color: #8fb935
+}
+
+#battery.half:not(.charging) {
+    color: #e6e22e;
+}
+
+#battery.warning:not(.charging) {
+    color: #e09c3b;
+}
+
+#battery.critical:not(.charging) {
+    color: #e64747;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    to {
+        opacity: 0.3;
+    }
+}
+
+#bluetooth.off {
+    color: #e64747
+}
+
+#bluetooth {
+    padding-right: 8px;
+}
+
+#bluetooth.connected {
+    color: Green;
+}
+
+#wireplumber,
+#battery,
+#idle_inhibitor,
+#network,
+#tray,
+#debian-icon {
+    padding-right: 1em
+}
