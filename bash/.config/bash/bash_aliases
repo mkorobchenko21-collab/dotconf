@@ -17,5 +17,8 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias v='vim'
 
-
+# git aliases
 alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gco='git checkout'
