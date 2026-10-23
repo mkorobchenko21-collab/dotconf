@@ -13,8 +13,12 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 alias l='ls -la'
+alias cp='cp -i'
+alias mv='mv -i'
 alias ..='cd ..'
 alias ...='cd ../..'
+alias back='cd $OLDPWD'
+
 alias v='vim'
 alias nv='nvim'
 alias se='sudoedit'
