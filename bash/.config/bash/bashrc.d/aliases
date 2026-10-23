@@ -16,7 +16,7 @@ alias l='ls -la'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias v='vim'
-alias e='edit'
+alias nv='nvim'
 alias se='sudoedit'
 
 # git aliases
