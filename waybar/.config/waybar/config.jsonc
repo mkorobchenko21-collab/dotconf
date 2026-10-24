@@ -33,7 +33,7 @@
         "on-click-right": "ghostty -e htop"
     },
     "custom/now-playing": {
-        "exec": "now_playing_waybar",
+        "exec": "$HOME/.config/waybar/scripts/now_playing_waybar/script.bash",
         "interval": 2,
         "format": "{text}",
         "return-type": "json",
