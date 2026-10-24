@@ -21,6 +21,10 @@ alias back='cd $OLDPWD'
 
 alias v='vim'
 alias nv='nvim'
+alias nvf='find ~/ | fzf -m --preview="batcat --color=always {}" --bind "enter:become(nvim {+})"'
+alias nvcf='fzf -m --preview="batcat --color=always {}" --bind "enter:become(nvim {+})"'
+alias nvfd='find ~/ -type d | fzf -m --preview="batcat --color=always {}" --bind "enter:become(nvim {+})"'
+alias nvcfd='find . -type d | fzf -m --preview="batcat --color=always {}" --bind "enter:become(nvim {+})"'
 alias se='sudoedit'
 
 # git aliases

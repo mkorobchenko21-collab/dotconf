@@ -84,6 +84,13 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# fzf
+eval "$(fzf --bash)"
+# Source - https://stackoverflow.com/a/79140119
+# Posted by pmf
+# Retrieved 2026-10-24, License - CC BY-SA 4.0
+
+
 if [ -d "$HOME/.config/bash/bashrc.d" ]; then
     for file in "$HOME/.config/bash/bashrc.d/"*; do
         [ -r "$file" ] && source "$file"
