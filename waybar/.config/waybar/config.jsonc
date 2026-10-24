@@ -6,7 +6,8 @@
     "modules-left": [
         "sway/workspaces",
         "temperature",
-        "sway/mode"
+        "sway/mode",
+        "custom/now-playing"
     ],
     "modules-center": [
         "clock"
@@ -30,6 +31,15 @@
         "format": "{temperatureC}°C",
         "on-click": "ghostty -e bpytop",
         "on-click-right": "ghostty -e htop"
+    },
+    "custom/now-playing": {
+        "exec": "now_playing_waybar",
+        "interval": 2,
+        "format": "{text}",
+        "return-type": "json",
+        "tooltip": "{tooltip}",
+        "on-click": "playerctl previous",
+        "on-click-right": "playerctl next"
     },
     // modules-center
     "clock": {
