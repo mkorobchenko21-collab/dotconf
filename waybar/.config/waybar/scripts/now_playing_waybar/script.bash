@@ -24,8 +24,7 @@ tooltip="\
 <span alpha='72%'> Song</span> <span alpha='96%'>${title}</span>\
 "
 
-if (( ${#title} + ${#artist} < 30 )); then
-    printf '{"text":"  %s","tooltip":"%s"}\n' "$title - $artist" "$tooltip"
-else
-    printf '{"text":"  %s","tooltip":"%s"}\n' "$title" "$tooltip"
-fi
+(( ${#title} <= 20 )) && title_preview=${title} || title_preview="${title:0:20}..."
+(( ${#artist} <= 15 )) && artist_preview=${artist} || artist_preview="${artist:0:15}..."
+
+printf '{"text":"  %s","tooltip":"%s"}\n' "${title_preview} - ${artist_preview}" "$tooltip"
