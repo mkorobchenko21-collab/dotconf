@@ -1,3 +1,6 @@
+# clipboard manager
+exec wl-paste -t text --watch clipman store --no-persist > /tmp/clipman-debug.log 2>&1
+
 # Default config for sway
 #
 # Copy this to ~/.config/sway/config and edit it to your liking.
@@ -31,14 +34,10 @@ exec swayidle -w
 # mouse button for dragging.
 floating_modifier $mod normal
 
-#
 # Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
 bar {
     swaybar_command waybar
 }
-
 
 include /etc/sway/config.d/*
 include ./sway.d/*
