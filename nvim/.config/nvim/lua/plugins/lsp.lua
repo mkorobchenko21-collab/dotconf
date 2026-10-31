@@ -42,7 +42,6 @@ return {
                 "cssls",
                 "html",
                 "jsonls",
-                "roslyn_ls"
             },
         },
     }
