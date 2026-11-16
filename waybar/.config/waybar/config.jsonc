@@ -34,7 +34,7 @@
     },
     "custom/now-playing": {
         "exec": "$HOME/.config/waybar/scripts/now_playing_waybar/script.bash",
-        "interval": 2,
+        "interval": 5,
         "format": "{text}",
         "return-type": "json",
         "tooltip": "{tooltip}",
