@@ -44,6 +44,7 @@
     // modules-center
     "clock": {
         "format": "{:%d.%m.%Y | %H:%M}",
+        "locale": "en_GB.UTF-8",
         "tooltip": true,
         "tooltip-format": "{calendar}",
         "calendar": {
@@ -54,7 +55,7 @@
             "format": {
                 "months": "<span color='#ffead3'><b>{}</b></span>",
                 "days": "<span color='#ecc6d9'><b>{}</b></span>",
-                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+                "weeks": "<span color='#99ffdd'><b>W{:%W}</b></span>",
                 "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
                 "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
             }
