@@ -66,6 +66,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- #
 -- # My config
 -- #
+vim.opt.wrap = false
+
 vim.opt.foldcolumn = "auto"
 
 vim.opt.spell = false
