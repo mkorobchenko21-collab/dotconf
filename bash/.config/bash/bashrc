@@ -98,6 +98,3 @@ if [ -d "$HOME/.config/bash/bashrc.d" ]; then
     unset file
 fi
 
-
-# Added by Antigravity CLI installer
-export PATH="/home/maximus/.local/bin:$PATH"
