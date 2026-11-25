@@ -43,8 +43,6 @@ map('v', '<a-j>', ":move '>+1<CR>gv=gv")
 map('v', '<a-k>', ":move '<-2<CR>gv=gv")
 
 -- Buffers
-map('n', '<leader>n', ':bnext<CR>', opt)
-map('n', '<leader>N', ':bprev<CR>', opt)
 map('n', '<leader>bd', ':bd<CR>', opt)
 map('n', '<leader>bl', ':ls<CR>', opt)
 map('n', '<leader>bc', function() vim.api.nvim_buf_set_lines(0, 0, -1, false, {}) end,
