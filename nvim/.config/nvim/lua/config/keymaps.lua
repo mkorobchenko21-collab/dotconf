@@ -46,12 +46,8 @@ map('v', '<a-k>', ":move '<-2<CR>gv=gv")
 map('n', '<leader>bd', ':bd<CR>', opt)
 
 -- Tabs
-map('n', '<leader>tn', ':tabnew<CR>', opt)
-map('n', '<leader>tN', ':tabnew$<CR>', opt)
-map('n', '<leader>td', ':tabclose<CR>', opt)
 map('n', '<s-h>', ':tabprev<CR>', opt)
 map('n', '<s-l>', ':tabnext<CR>', opt)
-map('n', '<leader>tt', ':tabnew +terminal<CR>', opt)
 
 --  tab navigation
 for i = 1, 9, 1 do
