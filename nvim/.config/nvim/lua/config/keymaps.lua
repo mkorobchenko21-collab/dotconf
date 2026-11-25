@@ -117,7 +117,6 @@ map({ 'n', 'v' }, '<leader>y', '"+y')
 map({ 'n', 'v' }, '<leader>p', '"+p')
 
 -- code actions (lsp)
-map('n', '<leader>cy', ':%y+<CR>', { desc = 'yank whole file' })
 map('n', '<leader>ff', vim.lsp.buf.format, { desc = 'format file' })
 map('i', '<C-space>', '<C-x><C-o>', { desc = 'trigger completion' })
 
