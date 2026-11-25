@@ -93,6 +93,7 @@ map("i", ";", ";<c-g>u")
 
 -- file actions
 map('n', '<leader>ff', vim.lsp.buf.format, { desc = 'format file' })
+map('i', '<C-space>', '<C-x><C-o>', { desc = 'trigger completion' })
 map('n', '<leader>fc', function()
     vim.cmd.edit(vim.fn.stdpath("config"))
 end
