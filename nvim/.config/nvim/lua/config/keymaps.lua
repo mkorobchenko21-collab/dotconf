@@ -73,7 +73,6 @@ map('n', '<leader>fc', function()
     end,
     { desc = 'edit config dir' })
 map('n', '<leader>fy', '<cmd>let @+ = @%<cr>', { desc = 'yank file path in system register' })
-map('n', '<leader>fs', '<cmd>source $MYVIMRC<CR>', { desc = 'source neovim config' })
 map('n', '<leader>fp', '<cmd>echo expand("%:p")<CR>', { desc = 'see current file path' })
 map('n', '<leader>ft', function()
         local word = vim.fn.expand('<cword>')
