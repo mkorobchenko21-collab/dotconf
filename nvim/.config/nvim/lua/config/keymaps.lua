@@ -28,16 +28,6 @@ map({ 'n', 'i' }, '<ESC>', function()
 end, { expr = true })
 
 
--- Map <C-{hjkl}> to navigate between windows in any modes
-map({ 't', 'i' }, '<C-h>', '<C-\\><C-n><C-w>h', { remap = true, silent = true })
-map({ 't', 'i' }, '<C-j>', '<C-\\><C-n><C-w>j', { remap = true, silent = true })
-map({ 't', 'i' }, '<C-k>', '<C-\\><C-n><C-w>k', { remap = true, silent = true })
-map({ 't', 'i' }, '<C-l>', '<C-\\><C-n><C-w>l', { remap = true, silent = true })
-map({ 'n' }, '<C-h>', '<C-w>h', { remap = true, silent = true })
-map({ 'n' }, '<C-j>', '<C-w>j', { remap = true, silent = true })
-map({ 'n' }, '<C-k>', '<C-w>k', { remap = true, silent = true })
-map({ 'n' }, '<C-l>', '<C-w>l', { remap = true, silent = true })
-
 -- Resize window using <ctrl> arrow keys
 map("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
 map("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
