@@ -62,11 +62,6 @@ for i = 1, 9, 1 do
 end
 
 
--- windows
-map("n", "<leader>wh", ":split<CR>", opt)
-map("n", "<leader>wv", ":vsplit<CR>", opt)
-map('n', '<leader>wc', ':close<CR>', opt)
-
 -- Add undo break-points
 map("i", ",", ",<c-g>u")
 map("i", ".", ".<c-g>u")
