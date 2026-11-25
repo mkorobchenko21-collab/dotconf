@@ -128,8 +128,7 @@ map('n', '<leader>or', '<cmd>setlocal relativenumber!<CR>', { desc = 'toggle rel
 map('n', '<leader>ow', '<cmd>setlocal wrap!<CR>', { desc = 'toggle wrapping lines' })
 
 -- code navigations
--- NOTE: <c-a> was to paste last inserted text
-map('i', '<c-a>', '<esc>A', { desc = 'move cursor to the EOL' })
+map('i', '<c-e>', '<C-o>A', { desc = 'move cursor at the EOL' })
 
 -- Explorer
 -- TODO: optionaly switch to neotree
