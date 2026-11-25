@@ -44,9 +44,6 @@ map('v', '<a-k>', ":move '<-2<CR>gv=gv")
 
 -- Buffers
 map('n', '<leader>bd', ':bd<CR>', opt)
-map('n', '<leader>bl', ':ls<CR>', opt)
-map('n', '<leader>bc', function() vim.api.nvim_buf_set_lines(0, 0, -1, false, {}) end,
-    { desc = 'Clear buffer content' })
 
 -- Tabs
 map('n', '<leader>tn', ':tabnew<CR>', opt)
