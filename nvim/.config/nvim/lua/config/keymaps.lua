@@ -68,8 +68,6 @@ map("i", ".", ".<c-g>u")
 map("i", ";", ";<c-g>u")
 
 -- file actions
-map('n', '<leader>ff', vim.lsp.buf.format, { desc = 'format file' })
-map('i', '<C-space>', '<C-x><C-o>', { desc = 'trigger completion' })
 map('n', '<leader>fc', function()
         vim.cmd.edit(vim.fn.stdpath("config"))
     end,
@@ -123,6 +121,8 @@ map({ 'n', 'v' }, '<leader>p', '"+p')
 -- NOTE: others code actions keymaping in plugins/lsp
 map('n', '<leader>cd', vim.diagnostic.open_float, { desc = 'check message' })
 map('n', '<leader>cy', ':%y+<CR>', { desc = 'yank whole file' })
+map('n', '<leader>ff', vim.lsp.buf.format, { desc = 'format file' })
+map('i', '<C-space>', '<C-x><C-o>', { desc = 'trigger completion' })
 
 -- vim options changes
 map('n', '<leader>os', '<cmd>setlocal spell!<CR>', { desc = 'toggle spell checking' })
