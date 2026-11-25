@@ -95,9 +95,9 @@ map("i", ";", ";<c-g>u")
 map('n', '<leader>ff', vim.lsp.buf.format, { desc = 'format file' })
 map('i', '<C-space>', '<C-x><C-o>', { desc = 'trigger completion' })
 map('n', '<leader>fc', function()
-    vim.cmd.edit(vim.fn.stdpath("config"))
-end
-)
+        vim.cmd.edit(vim.fn.stdpath("config"))
+    end,
+    { desc = 'edit config dir' })
 map('n', '<leader>fy', '<cmd>let @+ = @%<cr>', { desc = 'yank file path in system register' })
 map('n', '<leader>fs', '<cmd>source $MYVIMRC<CR>', { desc = 'source neovim config' })
 map('n', '<leader>fp', '<cmd>echo expand("%:p")<CR>', { desc = 'see current file path' })
