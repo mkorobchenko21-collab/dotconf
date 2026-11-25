@@ -38,8 +38,20 @@ return {
                 end,
             })
 
+            vim.keymap.set("n", "<M-c>", function()
+                local copilot = vim.lsp.inline_completion.is_enabled()
+                vim.lsp.inline_completion.enable(not copilot)
+                if copilot then
+                    print("copilot off")
+                else
+                    print("copilot on")
+                end
+            end, { desc = "Toggle Copilot inline completion" })
+
             vim.keymap.set("i", "<M-l>", function()
-                    vim.lsp.inline_completion.get()
+                    if vim.lsp.inline_completion.is_enabled() then
+                        vim.lsp.inline_completion.get()
+                    end
                 end,
                 { desc = "Accept Copilot inline completion" })
         end
