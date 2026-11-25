@@ -116,8 +116,7 @@ map('n', '+', '"+')
 map({ 'n', 'v' }, '<leader>y', '"+y')
 map({ 'n', 'v' }, '<leader>p', '"+p')
 
--- code actions
--- NOTE: others code actions keymaping in plugins/lsp
+-- code actions (lsp)
 map('n', '<leader>cd', vim.diagnostic.open_float, { desc = 'check message' })
 map('n', '<leader>cy', ':%y+<CR>', { desc = 'yank whole file' })
 map('n', '<leader>ff', vim.lsp.buf.format, { desc = 'format file' })
